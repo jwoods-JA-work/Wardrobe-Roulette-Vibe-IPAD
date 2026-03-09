@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wardrobe Roulette</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="wheel-page">
+
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="wheel-info">
+  <h1>Wardrobe Roulette</h1>
+  <p> Press Spin the to get your budget!</p>
+    </div>
+<div class="wheel-container">
+
+  <div class="spinBtn" id="spinBtn">Spin</div>
+
+  <div class="wheel" id="wheel">
+      <div class="number" style="--i:1; --clr:#db7093;"><span>70</span></div>
+      <div class="number" style="--i:2; --clr:#20b2aa;"><span>220</span></div>
+      <div class="number" style="--i:3; --clr:#d63e92;"><span>90</span></div>
+      <div class="number" style="--i:4; --clr:#daa520;"><span>180</span></div>
+      <div class="number" style="--i:5; --clr:#ff340f;"><span>120</span></div>
+      <div class="number" style="--i:6; --clr:#ff7f50;"><span>150</span></div>
+  </div>
+
+</div>
+
+<p id = "budgetDisplay" class = "budget-text"></p>
+  <button id="startGameBtn" class="start-btn" style="display:none;" onclick="startGame()">Start Choosing Outfit</button>
+
+
+  <script src="game.js"></script>
+</body>
+</html>

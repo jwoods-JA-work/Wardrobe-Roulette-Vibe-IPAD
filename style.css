@@ -1,0 +1,643 @@
+/* GAME PAGE STYLES */
+body.game-page {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* blue gradient */
+  font-family: 'Trebuchet MS', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body.game-page .container {
+  background: white;        /* opaque for contrast */
+  color: #000;              /* dark text */
+  width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+.container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#clothingRack h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Game container layout */
+.game-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start; /* so info box sits to the right of the rack */
+}
+
+
+/* Mannequin */
+.mannequin-container {
+  position: relative;
+  width: 300px;
+  height: 550px;
+  border: 2px dashed #aaa;  /* optional dashed border to show empty space */
+  border-radius: 12px;
+  background: #f9f9f9;       /* light background so clothes stand out */
+}
+
+
+#mannequin {
+  width: 100%;
+  height: auto;
+}
+
+#mannequinLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10; /* make clothes appear on top */
+}
+
+/* Clothing rack items */
+#itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 400px;
+}
+
+.item {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  width: 90px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s;
+  background: #fff;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  border-color: green;
+}
+
+.selected {
+  border: 2px solid green;
+  background: #e8fbe8;
+}
+
+/* Clothing images pop */
+#itemsContainer .item img {
+  width: 60px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-bottom: 5px;
+}
+
+/* Arrows for cycling colors */
+/* ---------------- Arrows for cycling colors ---------------- */
+/* ---------------- Arrows for cycling colors ---------------- */
+.arrow {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 14px;
+  position: absolute;
+  top: 35%;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  z-index: 20;  /* ensures arrows are above clothes */
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.arrow.left {
+  left: -3px;   /* move slightly inwards so it doesn’t overlap image */
+}
+
+.arrow.right {
+  right: -3px;  /* move slightly inwards so it doesn’t overlap image */
+}
+
+
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  margin: 10px 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Drawer */
+#drawer {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.locked {
+  background: #ddd;
+}
+
+.unlocked {
+  background: #b7f3b7;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between; /* mannequin left, rack+controls right */
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column; /* stack timer and buttons vertically */
+  align-items: flex-end;  /* move everything to the right */
+  gap: 10px;              /* space between elements */
+}
+
+.controls-container button {
+  width: 150px;          /* optional: same size for buttons */
+}
+
+/* Wheel Page */
+body.wheel-page {
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.wheel-layout {
+  display: flex;
+  flex-direction: column;   /* ⭐ STACK ITEMS */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.wheel-info {
+  background: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+}
+
+.wheel-info h1 {
+  font-size: 3rem;
+  color: #ff4f81;
+  margin-bottom: 10px;
+
+  text-shadow:
+    3px 3px 0 #fff,
+    6px 6px 12px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.spin-btn,
+.start-btn {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px 28px;
+  margin-top: 10px;
+
+  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #c93a66,
+    0 12px 20px rgba(0,0,0,0.3);
+
+  transition: all 0.15s ease;
+}
+
+.spin-btn:hover,
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+.spin-btn:active,
+.start-btn:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #c93a66,
+    0 6px 10px rgba(0,0,0,0.3);
+}
+
+.budget-text {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+body.wheel-page .container {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+/* ========================================
+   NEW CSS SLICE WHEEL
+======================================== */
+
+.wheel-container {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px
+}
+
+/* Pointer */
+/* Pointer / stopper */
+.wheel-container::before {
+  content: "";
+  position: absolute;
+  top: -15px;      /* move above wheel */
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 30px solid #000;   /* flipped */
+  z-index: 20;
+}
+/* Wheel Circle */
+.wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 5s ease-out;
+  box-shadow:
+    0 0 0 6px #333,
+    0 0 0 15px #fff,
+    0 0 0 20px #111;
+}
+
+/* Wheel slices */
+.wheel .number {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: bottom right;
+  transform: rotate(calc(60deg * var(--i)));
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr);
+}
+
+.wheel .number span {
+  transform: rotate(45deg);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.wheel .number span::before {
+  content: "$";
+  font-size: 0.7em;
+}
+
+
+
+
+
+.bg-decor::before,
+.bg-decor::after {
+  content: "";
+  position: fixed;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  filter: blur(50px);
+  animation: floaty 8s ease-in-out infinite;
+}
+
+.bg-decor::before {
+  top: 10%;
+  left: 5%;
+}
+
+.bg-decor::after {
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 4s;
+}
+
+@keyframes floaty {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+
+
+/* START SCREEN */
+body.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff7eb9);
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.slide {
+ /* JS will show */
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide img {
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.slide p {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+#nextBtn {
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+#nextBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(19, 11, 11, 0.5);
+}
+
+.slide .tip {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  font-style: italic;
+}
+
+
+.slide-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Make both buttons same size */
+.slide-controls button {
+  width: 180px;           /* same width for both */
+  height: 60px;           /* same height */
+  font-size: 1.5rem;      /* text size */
+  border-radius: 15px;    /* rounded corners */
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  text-align: center;     /* center the arrow/text */
+}
+
+.slide-controls button:hover {
+  transform: scale(1.1);
+}
+
+
+
+body.wheel-page button {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px 28px;
+
+  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
+  border-radius: 30px;
+
+  box-shadow:
+    0 6px 0 #c93a66,
+    0 10px 20px rgba(0,0,0,0.3);
+
+  transition: all 0.15s ease;
+}
+
+body.wheel-page button:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #c93a66,
+    0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* Clothing spawn animation */
+@keyframes dropIn {
+  0% {
+    transform: translate(-50%, -80px) scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, 5px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.clothing-drop {
+  animation: dropIn 0.45s ease-out;
+}
+
+@keyframes shakeWarning {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+.budget-shake {
+  animation: shakeWarning 0.4s;
+}
+
+@keyframes popSelect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.pop {
+  animation: popSelect 0.25s ease;
+}
+
+@keyframes unlockGlow {
+  0% { box-shadow: 0 0 0 rgba(0,255,120,0); }
+  50% { box-shadow: 0 0 25px rgba(0,255,120,0.9); }
+  100% { box-shadow: 0 0 0 rgba(0,255,120,0); }
+}
+
+.unlocked {
+  background: #b7f3b7;
+  animation: unlockGlow 0.8s ease;
+}
+
+.slide {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+    letter-spacing: 8px;
+  }
+  60% {
+    transform: translateY(5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 2px;
+  }
+}
+
+.game-title {
+  animation: titleReveal 1s ease-out forwards;
+}
+
+@keyframes floatSlow {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float-item {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Spin button centered on wheel */
+.wheel-container .spinBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90px;
+  height: 90px;
+  
+  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
+  border-radius: 50%;
+  border: 4px solid #c93a66;
+  z-index: 30;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+}
