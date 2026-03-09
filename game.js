@@ -49,7 +49,7 @@ let currentColors = [];     // color index per clothing item
 
 const clothingItems = [
 {
-  name: "Basic Pick: Tops",
+  name: "Basic: Tops",
   category: "top",
   price: 35,
   width: 360,
@@ -64,28 +64,28 @@ const clothingItems = [
   images: ["images/Smart_Pick/smart_choice1.png","images/Smart_Pick/smart_choice2.png","images/Smart_Pick/smart_choice3.png"]
 },
 {
-  name: "Luxury Choice: Tops",
+  name: "Luxury: Tops",
   category: "top",
    yOffset: -8,
   price: 110,
   images: ["images/Luxury_Pick/luxury_pick1.png","images/Luxury_Pick/luxury_pick2.png","images/Luxury_Pick/luxury_pick3.png"]
 },
 {
-  name: "Basic Pick: Bottoms",
+  name: "Basic: Bottoms",
   category: "bottom",
   price: 35,
   images: ["images/Budget_Pick/budget_pants1.png","images/Budget_Pick/budget_pants2.png","images/Budget_Pick/budget_pants3.png"]
 }
 ,
 {
-  name: "Standard Choice: Bottoms",
+  name: "Standard: Bottoms",
   category: "bottom",
   price: 65,
   images: ["images/Smart_Pick/smart_pants1.png","images/Smart_Pick/smart_pants2.png","images/Smart_Pick/smart_pants3.png"]
 }
 ,
 {
-  name: "Luxury Pick: Bottoms",
+  name: "Luxury: Bottoms",
   category: "bottom",
   price: 110,
   images: ["images/Luxury_Pick/luxury_pants1.png","images/Luxury_Pick/luxury_pants2.png","images/Luxury_Pick/luxury_pants3.png"]
