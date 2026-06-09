@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
 /* GAME PAGE STYLES */
 body.game-page {
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* blue gradient */
-  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(135deg, #285F74, #00C0CA); /* blue gradient */
+  font-family: 'Roboto Condensed', sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 20px;
@@ -13,23 +15,27 @@ body.game-page {
 
 body.game-page .container {
   background: white;        /* opaque for contrast */
-  color: #000;              /* dark text */
+  color: #22404d;              /* dark text */
   width: 750px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(34,64,77,0.2);
 }
-
+.container h2,#clothingRack, .wheel-info h1, .game-title {
+  font-family: 'Montserrat', sans-serif;
+}
 /* Headings */
-.container h2 {
+.container h2{
   font-size: 2.5rem;
   margin-bottom: 15px;
+  color: 22404d;
 }
 
 #clothingRack h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
+  color: #285f74;
 }
 
 /* Game container layout */
@@ -46,9 +52,9 @@ body.game-page .container {
   position: relative;
   width: 300px;
   height: 550px;
-  border: 2px dashed #aaa;  /* optional dashed border to show empty space */
+  border: 2px dashed #00a0af;  /* optional dashed border to show empty space */
   border-radius: 12px;
-  background: #f9f9f9;       /* light background so clothes stand out */
+  background: #FFFFFF;       /* light background so clothes stand out */
 }
 
 
@@ -76,7 +82,7 @@ body.game-page .container {
 }
 
 .item {
-  border: 2px solid #ccc;
+  border: 2px solid #285f74;
   border-radius: 8px;
   padding: 5px;
   margin: 5px;
@@ -90,19 +96,19 @@ body.game-page .container {
 
 .item:hover {
   transform: scale(1.1);
-  border-color: green;
+  border-color: #00c0ca;
 }
 
 .selected {
-  border: 2px solid green;
-  background: #e8fbe8;
+  border: 2px solid 00889c;
+  background: rgba(0,193,202,0.1);
 }
 
 /* Clothing images pop */
 #itemsContainer .item img {
   width: 60px;
   height: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(34,64,77,0.15);
   margin-bottom: 5px;
 }
 
@@ -118,7 +124,7 @@ body.game-page .container {
   top: 35%;
   width: 20px;
   height: 20px;
-  color: #333;
+  color: #22404d;
   font-weight: bold;
   text-align: center;
   line-height: 20px;
@@ -132,6 +138,7 @@ body.game-page .container {
 .arrow:hover {
   transform: scale(1.2);
   opacity: 1;
+  color: #00889c;
 }
 
 .arrow.left {
@@ -146,21 +153,22 @@ body.game-page .container {
 
 /* Buttons */
 button {
+  font-family: 'Roboto Condensed', sans-serif;
   padding: 12px 20px;
   margin: 10px 5px;
   font-size: 1rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  background: linear-gradient(45deg, #00889c, #285f74);
   color: #fff;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+box-shadow: 0 6px 12px rgba(34, 64, 77, 0.3);  transition: all 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+transform: scale(1.05);
+background: linear-gradient(45deg, #00C0CA, #00889C);
+box-shadow: 0 6px 12px rgba(34, 64, 77, 0.3);
 }
 
 /* Drawer */
@@ -174,13 +182,14 @@ button:hover {
 }
 
 .locked {
-  background: #ddd;
+  background: #00c0ca;
 }
 
 .unlocked {
-  background: #b7f3b7;
+  background: #00c0ca;
+  color: 22404d;
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(34, 64, 77, 0.3);
 }
 
 .game-container {
@@ -204,7 +213,7 @@ button:hover {
 
 /* Wheel Page */
 body.wheel-page {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   min-height: 100vh;
 
@@ -212,7 +221,7 @@ body.wheel-page {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+  background: linear-gradient(135deg,#22404d,#00889c,#00a0af, #285f74);
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
 }
@@ -229,7 +238,6 @@ body.wheel-page {
   align-items: center;
   justify-content: center;
   gap: 30px;
-
   width: 100%;
   max-width: 900px;
   margin: auto;
@@ -240,7 +248,7 @@ body.wheel-page {
   background: white;
   padding: 45px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(34,64,77,0.25);
   text-align: center;
   width: 90%;
   max-width: 420px;
@@ -248,12 +256,12 @@ body.wheel-page {
 
 .wheel-info h1 {
   font-size: 3rem;
-  color: #ff4f81;
+  color: #00889c;
   margin-bottom: 10px;
 
   text-shadow:
     3px 3px 0 #fff,
-    6px 6px 12px rgba(0,0,0,0.25);
+    6px 6px 12px rgba(34,64,77,0.15);
 }
 
 .subtitle {
@@ -261,43 +269,26 @@ body.wheel-page {
   margin-bottom: 25px;
 }
 
-.spin-btn,
-.start-btn {
-  font-size: 1.3rem;
-  font-weight: bold;
-  padding: 15px 28px;
-  margin-top: 10px;
 
-  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-
-  box-shadow:
-    0 6px 0 #c93a66,
-    0 12px 20px rgba(0,0,0,0.3);
-
-  transition: all 0.15s ease;
-}
 
 .spin-btn:hover,
 .start-btn:hover {
   transform: scale(1.05);
+  background: linear-gradient(45deg, #00A0AF, #00C0CA);
 }
 
 .spin-btn:active,
 .start-btn:active {
   transform: translateY(4px);
   box-shadow:
-    0 2px 0 #c93a66,
+    0 2px 0 #22404d,
     0 6px 10px rgba(0,0,0,0.3);
 }
 
 .budget-text {
   font-size: 1.6rem;
   margin-top: 20px;
-  color: #333;
+  color: #22404d;
   font-weight: bold;
 }
 
@@ -305,7 +296,7 @@ body.wheel-page .container {
   background: white;
   padding: 50px 60px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(34,64,77,0.2);
   text-align: center;
   margin-bottom: 30px;
 }
@@ -336,7 +327,7 @@ body.wheel-page .container {
   height: 0;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
-  border-top: 30px solid #000;   /* flipped */
+  border-top: 30px solid #000000;   /* flipped */
   z-index: 20;
 }
 /* Wheel Circle */
@@ -348,9 +339,9 @@ body.wheel-page .container {
   overflow: hidden;
   transition: transform 5s ease-out;
   box-shadow:
-    0 0 0 6px #333,
+    0 0 0 6px #285f74,
     0 0 0 15px #fff,
-    0 0 0 20px #111;
+    0 0 0 20px #22404d;
 }
 
 /* Wheel slices */
@@ -420,9 +411,9 @@ body.start-screen {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff7eb9);
-  font-family: 'Trebuchet MS', sans-serif;
-  color: #fff;
+  background: linear-gradient(135deg, #285f74, #00a0af, #285f74);
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FFFFFF;
 }
 
 .slides-container {
@@ -448,32 +439,16 @@ body.start-screen {
 .slide p {
   font-size: 1.8rem;
   margin-bottom: 40px;
-  text-shadow: 2px 2px 8px #000;
+  text-shadow: 2px 2px 8px #22404d;
 }
 
-#nextBtn {
-  padding: 20px 50px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-  transition: all 0.3s ease;
-}
 
-#nextBtn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 25px rgba(19, 11, 11, 0.5);
-}
 
 .slide .tip {
   font-size: 1.2rem;
   margin-top: 10px;
   color: #fff;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 1px 1px 3px #22404d;
   font-style: italic;
 }
 
@@ -493,14 +468,16 @@ body.start-screen {
   border-radius: 15px;    /* rounded corners */
   border: none;
   cursor: pointer;
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  background: #285F74;
   color: #fff;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0 6px 15px rgba(34,64,77,0.3);
   text-align: center;     /* center the arrow/text */
 }
 
 .slide-controls button:hover {
   transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(34, 64, 77, 0.6);
 }
 
 
@@ -510,20 +487,19 @@ body.wheel-page button {
   font-weight: bold;
   padding: 15px 28px;
 
-  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
+  background: linear-gradient(45deg,#00a0af,#00c0ca);
   border-radius: 30px;
 
   box-shadow:
-    0 6px 0 #c93a66,
-    0 10px 20px rgba(0,0,0,0.3);
-
+    0 6px 0 #22404d,
+  0 10px 20px rgba(34, 64, 77, 0.3);
   transition: all 0.15s ease;
 }
 
 body.wheel-page button:active {
   transform: translateY(4px);
   box-shadow:
-    0 2px 0 #c93a66,
+    0 2px 0 #22404d,
     0 6px 10px rgba(0,0,0,0.3);
 }
 
@@ -568,13 +544,13 @@ body.wheel-page button:active {
 }
 
 @keyframes unlockGlow {
-  0% { box-shadow: 0 0 0 rgba(0,255,120,0); }
-  50% { box-shadow: 0 0 25px rgba(0,255,120,0.9); }
-  100% { box-shadow: 0 0 0 rgba(0,255,120,0); }
+  0% { box-shadow: 0 0 0 rgba(0, 192, 202, 0); }
+  50% { box-shadow: 0 0 25px rgba(0, 192, 202, 0.9); }
+  100% { box-shadow: 0 0 0 rgba(0, 192, 202, 0); }
 }
 
 .unlocked {
-  background: #b7f3b7;
+  background: rgba(0, 192, 202, 0.2);
   animation: unlockGlow 0.8s ease;
 }
 
@@ -620,6 +596,7 @@ body.wheel-page button:active {
 
 /* Spin button centered on wheel */
 .wheel-container .spinBtn {
+  font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -628,9 +605,9 @@ body.wheel-page button:active {
   width: 90px;
   height: 90px;
   
-  background: linear-gradient(45deg,#ff4f81,#ff7eb3);
+  background: linear-gradient(45deg,#00a0af,#00c0ca);
   border-radius: 50%;
-  border: 4px solid #c93a66;
+  border: 4px solid #22404d;
   z-index: 30;
   
   display: flex;
