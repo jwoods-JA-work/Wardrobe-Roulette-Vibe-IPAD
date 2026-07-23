@@ -88,7 +88,7 @@ const clothingItems = [
   name: "Luxury Pick: Bottoms",
   category: "bottom",
   price: 110,
-  images: ["images/Luxury_Pick/luxury_pants1.png","images/Luxury_Pick/luxury_pants2.png","images/Luxury_Pick/luxury_pants3.png","images/Luxury_Pick/luxury_pants4.png","images/Luxury_Pick/luxury_pants5.png","images/Luxury_Pick/luxury_pants7.png"]
+  images: ["images/Luxury_Pick/luxury_pants1.png","images/Luxury_Pick/luxury_pants2.png","images/Luxury_Pick/luxury_pants3.png","images/Luxury_Pick/luxury_pants4.png","images/Luxury_Pick/luxury_pants5.png","images/Luxury_Pick/luxury_pants6.png"]
 }
 ];
 
