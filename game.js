@@ -49,46 +49,46 @@ let currentColors = [];     // color index per clothing item
 
 const clothingItems = [
 {
-  name: "Basic: Tops",
+  name: "Basic Pick: Tops",
   category: "top",
   price: 35,
   width: 360,
   height: 230,
-  images: ["images/Budget_Pick/budget_pick1.png","images/Budget_Pick/budget_pick2.png","images/Budget_Pick/budget_pick3.png"]
+  images: ["images/Budget_Pick/budget_pick1.png","images/Budget_Pick/budget_pick2.png","images/Budget_Pick/budget_pick3.png","images/Budget_Pick/budget_pick4.png","images/Budget_Pick/budget_pick5.png","images/Budget_Pick/budget_pick6.png","images/Budget_Pick/budget_pick7.png"]
 },
 {
   name: "Standard: Tops",
   category: "top",
   price: 65,
    yOffset: -20,
-  images: ["images/Smart_Pick/smart_choice1.png","images/Smart_Pick/smart_choice2.png","images/Smart_Pick/smart_choice3.png"]
+  images: ["images/Smart_Pick/smart_choice1.png","images/Smart_Pick/smart_choice2.png","images/Smart_Pick/smart_choice3.png","images/Smart_Pick/smart_choice4.png","images/Smart_Pick/smart_choice5.png","images/Smart_Pick/smart_choice6.png","images/Smart_Pick/smart_choice7.png","images/Smart_Pick/smart_choice8.png"]
 },
 {
-  name: "Luxury: Tops",
+  name: "Luxury Choice: Tops",
   category: "top",
    yOffset: -8,
   price: 110,
-  images: ["images/Luxury_Pick/luxury_pick1.png","images/Luxury_Pick/luxury_pick2.png","images/Luxury_Pick/luxury_pick3.png"]
+  images: ["images/Luxury_Pick/luxury_pick1.png","images/Luxury_Pick/luxury_pick2.png","images/Luxury_Pick/luxury_pick3.png","images/Luxury_Pick/luxury_pick4.png","images/Luxury_Pick/luxury_pick5.png","images/Luxury_Pick/luxury_pick6.png","images/Luxury_Pick/luxury_pick7.png"]
 },
 {
-  name: "Basic: Bottoms",
+  name: "Basic Pick: Bottoms",
   category: "bottom",
   price: 35,
-  images: ["images/Budget_Pick/budget_pants1.png","images/Budget_Pick/budget_pants2.png","images/Budget_Pick/budget_pants3.png"]
+  images: ["images/Budget_Pick/budget_pants1.png","images/Budget_Pick/budget_pants2.png","images/Budget_Pick/budget_pants3.png","images/Budget_Pick/budget_pants4.png","images/Budget_Pick/budget_pants5.png","images/Budget_Pick/budget_pants6.png"]
 }
 ,
 {
-  name: "Standard: Bottoms",
+  name: "Standard Choice: Bottoms",
   category: "bottom",
   price: 65,
-  images: ["images/Smart_Pick/smart_pants1.png","images/Smart_Pick/smart_pants2.png","images/Smart_Pick/smart_pants3.png"]
+  images: ["images/Smart_Pick/smart_pants1.png","images/Smart_Pick/smart_pants2.png","images/Smart_Pick/smart_pants3.png","images/Smart_Pick/smart_pants4.png","images/Smart_Pick/smart_pants5.png","images/Smart_Pick/smart_pants6.png"]
 }
 ,
 {
-  name: "Luxury: Bottoms",
+  name: "Luxury Pick: Bottoms",
   category: "bottom",
   price: 110,
-  images: ["images/Luxury_Pick/luxury_pants1.png","images/Luxury_Pick/luxury_pants2.png","images/Luxury_Pick/luxury_pants3.png"]
+  images: ["images/Luxury_Pick/luxury_pants1.png","images/Luxury_Pick/luxury_pants2.png","images/Luxury_Pick/luxury_pants3.png","images/Luxury_Pick/luxury_pants4.png","images/Luxury_Pick/luxury_pants5.png","images/Luxury_Pick/luxury_pants7.png"]
 }
 ];
 
